@@ -21,9 +21,9 @@ int main(int argc, char* argv[]){
         return 0;
     }
     if(pid == 0) {
-        cout<<"Child writing..."<<endl;
+        charatatime("Child writing...");
     }
     if(pid > 0) {
-        cout<<"Parent writing..."<<endl;
+        charatatime("Parent writing...");
     }
 }

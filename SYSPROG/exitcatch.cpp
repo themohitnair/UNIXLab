@@ -30,7 +30,7 @@ int main(void) {
     childpid = wait(&status);
     pr_exit(status);
 
-    if((pid=fork())==-2){
+    if((pid=fork())==-1){
         cerr<<"fork error"<<endl;
         return 0;
     }
