@@ -38,9 +38,6 @@ int main(int argc, char* argv[]) {
         case S_IFSOCK:
             cout<<"File is a socket. "<<endl;
             break;
-        case S_IEXEC:
-            cout<<"File is an executable. "<<endl;
-            break;
         default:
             cout<<"File type is unknown. "<<endl;
     }

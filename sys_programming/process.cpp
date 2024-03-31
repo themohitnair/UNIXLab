@@ -11,14 +11,16 @@ int main() {
     pid_t pid;
     cout<<"Original process: "<<getpid()<<endl<<"Parent process: "<<getppid()<<endl;
 
-    if((pid = fork()) < 0) {
+    pid = fork();
+
+    if(pid < 0) {
         cout<<"Fork error\n"<<endl;
         exit(EXIT_FAILURE);
     }
-    if((pid = fork()) > 0) {
+    if(pid > 0) {
         cout<<"Original process: "<<getpid()<<endl<<"Parent process: "<<getppid()<<endl;
     }
-    if((pid = fork()) == 0) {
+    if(pid == 0) {
         cout<<"Child process: "<<getpid()<<endl<<"Parent process: "<<getppid()<<endl;
     }
     cout<<"End of main"<<endl;

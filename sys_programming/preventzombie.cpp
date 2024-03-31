@@ -15,10 +15,10 @@ int main() {
         cout<<"Fork error.\n"<<endl;
         exit(EXIT_FAILURE);
     }
-    if((pid=fork()) > 0) {
+    if((pid=fork()) > 0) {        
         sleep(5);
         wait(&status);
-        cout<<"Parent ID: "<<getpid();
+        cout<<"Parent ID: "<<getpid()<<endl;
         system("ps u");
     }
     if((pid=fork()) == 0) {

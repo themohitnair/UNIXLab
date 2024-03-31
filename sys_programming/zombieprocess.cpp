@@ -18,9 +18,9 @@ int main(void) {
         cout<<"Waiting for exit status to be read by parent process. "<<endl;
         exit(0);
     }
-    if((pid=fork()) > 0) {
-        cout<<"Parent process ID: "<<getpid()<<endl;
+    if((pid=fork()) > 0) {        
         sleep(5);
+        cout<<"Parent process ID: "<<getpid()<<endl;
         system("ps u");
     }
     return 0;
