@@ -3,7 +3,7 @@
 # Write a shell script that accepts two file names as arguments, checks if the permissions for these files are identical and if the permissions are identical, output common permission and otherwise output each file name followed by its permissions.
 
 if [ $# -ne 2 ]; then
-    echo -e "Usage: sh <bash filename> <filename1>\n"
+    echo -e "Usage: sh <bash filename> <filename1> <filename2>\n"
     exit 1
 fi
 
