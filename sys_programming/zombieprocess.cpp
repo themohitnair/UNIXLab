@@ -13,12 +13,12 @@ int main(void) {
         cout<<"Fork error\n"<<endl;
         exit(EXIT_FAILURE);
     }
-    if((pid=fork()) == 0) {
+    if(pid == 0) {
         cout<<"Child process ID: "<<getpid()<<endl;
         cout<<"Waiting for exit status to be read by parent process. "<<endl;
         exit(0);
     }
-    if((pid=fork()) > 0) {        
+    if(pid > 0) {        
         sleep(5);
         cout<<"Parent process ID: "<<getpid()<<endl;
         system("ps u");

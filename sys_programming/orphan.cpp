@@ -14,11 +14,11 @@ int main() {
         cout<<"Fork error. "<<endl;
         exit(EXIT_FAILURE);
     }
-    if((pid=fork()) > 0) {
+    if(pid > 0) {
         cout<<"Parent process ID: "<<getpid()<<endl;
         exit(0);
     }
-    if((pid=fork()) == 0) {
+    if(pid == 0) {
         sleep(5);
         cout<<"Child process ID: "<<getpid()<<endl;
         cout<<"Orphan's parent: "<<getppid()<<endl;
