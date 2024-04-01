@@ -29,7 +29,7 @@ int main(void) {
         cout<<"Fork error\n";
         exit(EXIT_FAILURE);
     }
-    if((pid = fork()) > 0) {
+    if(pid > 0) {
         exit(23);
     }
     childpid = wait(&status);
@@ -40,7 +40,7 @@ int main(void) {
         cout<<"Fork error\n";
         exit(EXIT_FAILURE);
     }
-    if((pid = fork()) > 0) {
+    if(pid > 0) {
         abort();
     }
     childpid = wait(&status);
@@ -51,7 +51,7 @@ int main(void) {
         cout<<"Fork error\n";
         exit(EXIT_FAILURE);
     }
-    if((pid = fork()) > 0) {
+    if(pid > 0) {
         int res = 5/0;
     }
     childpid = wait(&status);
