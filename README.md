@@ -1,7 +1,9 @@
-#### Directory 1 (`bash_scripting`) - Shell Scripts for Basic File and String Operations
----
+##### UNIXLab GitHub Repository (ISL37 UNIX and Shell Programming Laboratory)
 
-This repository contains a collection of shell scripts designed to perform various file and string operations, prescribed under UNIX and Shell Programming Laboratory (ISL37) course of the Branch of ISE, M S Ramaiah Institute of Technology, Bangalore. 
+### Prerequisites:
+- To run the shell scripts, ensure that you have a POSIX-compliant shell environment installed, such as Bash.
+- For compiling and running the C/C++ programs, you need a C/C++ compiler (e.g., GCC) installed on your system.
+---
 
 #### Disclaimer
 
@@ -10,6 +12,12 @@ This repository contains a collection of shell scripts designed to perform vario
 Users are advised to exercise caution and use these programs at their own risk. It is recommended to thoroughly understand the code and its implications before learning it for a lab examination. Using these programs for cheating in any lab examination is strictly frowned upon and not encouraged.
 
 By using these programs, users acknowledge and accept the inherent risks associated with using these programs and agree to hold the creator harmless from any damages, liabilities, or losses that may arise from their use.
+
+
+#### Directory 1 (`bash_scripting`) - Shell Scripts for Basic File and String Operations
+---
+
+This directory contains a collection of shell scripts designed to perform various file and string operations, prescribed under UNIX and Shell Programming Laboratory (ISL37) course of the Branch of ISE, M S Ramaiah Institute of Technology, Bangalore. 
 
 #### Programs with Variable Descriptions and Summaries:
 
@@ -99,19 +107,106 @@ By using these programs, users acknowledge and accept the inherent risks associa
       - `maxof3()`: A function to find the maximum of three numbers.
    - **Usage**: `sh largest_of3.sh`
 
-#### Usage Instructions:
 
-1. **Clone the Repository**:
-   - Clone or download the repository containing the shell scripts to your local machine.
 
-2. **Navigate to the Directory**:
-   - Open a terminal or command prompt and navigate to the directory where you cloned or downloaded the repository.
+#### Directory 2 (`sys_programming`) - C++ System Programs (Kernel-esque)
+---
+This directory contains a collection of system programs in C++ designed to perform various file, pipe, process and kernel operations, prescribed under UNIX and Shell Programming Laboratory (ISL37) course of the Branch of ISE, M S Ramaiah Institute of Technology, Bangalore. 
 
-3. **Execute the Scripts**:
-   - Each script can be executed using the `sh` command followed by the script name and any required arguments.
+#### Programs with Descriptions, Usage Instructions, and Variable Descriptions:
 
-4. **Follow Program Instructions**:
-   - Follow the prompts provided by each script to interact with them and observe their functionality.
+1. **UNIX Command Implementations**:
+   - This section contains C/C++ programs that implement various UNIX commands using APIs.
+
+   (i) **ln.cpp**:
+       - **Description**: Implements the UNIX `ln` command using APIs.
+       - **Usage**: `./<executable> <filename> <link_filename>`
+       - **Variables**:
+         - `argc`: Number of command-line arguments.
+         - `argv[]`: Array of command-line arguments.
+       - Compile: `g++ ln.cpp -o ln`
+
+   (ii) **mv.cpp**:
+       - **Description**: Implements the UNIX `mv` command using APIs.
+       - **Usage**: `./<executable> <source_filename> <dest_filename>`
+       - **Variables**: Same as ln.cpp
+       - Compile: `g++ mv.cpp -o mv`
+
+   (iii) **rm.cpp**:
+       - **Description**: Implements the UNIX `rm` command using APIs.
+       - **Usage**: `./<executable> <filename>`
+       - **Variables**: Same as ln.cpp
+       - Compile: `g++ rm.cpp -o rm`
+
+2. **dp_cp.cpp**:
+   - **Description**: Displays the contents of a file on standard output and copies the contents of one file to another.
+   - **Usage**: `./<executable> <filename1> <filename2>`
+   - **Variables**:
+     - `argc`: Number of command-line arguments.
+     - `argv[]`: Array of command-line arguments.
+   - Compile: `g++ dp_cp.cpp -o dp_cp`
+
+3. **hundredthbyte.cpp**:
+   - **Description**: Reads every 100th byte from a file.
+   - **Usage**: `./<executable> <filename>`
+   - **Variables**: Same as ln.cpp
+   - Compile: `g++ hundredthbyte.cpp -o hundredthbyte`
+
+4. **fileinfo.cpp**:
+   - **Description**: Displays information about a given file, including the file type and Inode information.
+   - **Usage**: `./<executable> <filename1>`
+   - **Variables**: Same as ln.cpp
+   - Compile: `g++ fileinfo.cpp -o fileinfo`
+
+5. **process.cpp** and **processvfork.cpp**:
+   - **Description**: Create processes using `fork()` and `vfork()` system calls.
+   - **Usage**: Run the executables directly.
+   - **Variables**: Same as ln.cpp
+   - Compile: `g++ process.cpp -o process` and `g++ processvfork.cpp -o processvfork`
+
+6. **zombieprocess.cpp** and **preventzombie.cpp**:
+   - **Description**: Demonstrate and avoid Zombie processes.
+   - **Usage**: Run the executables directly.
+   - **Variables**: Same as ln.cpp
+   - Compile: `g++ zombieprocess.cpp -o zombieprocess` and `g++ preventzombie.cpp -o preventzombie`
+
+7. **orphan.cpp**:
+   - **Description**: Creates an Orphan process.
+   - **Usage**: Run the executable directly.
+   - **Variables**: Same as ln.cpp
+   - Compile: `g++ orphan.cpp -o orphan`
+
+8. **racecondition.cpp**:
+    - **Description**: Demonstrates a race condition.
+    - **Usage**: Run the executable directly.
+    - **Variables**: Same as ln.cpp
+    - Compile: `g++ racecondition.cpp -o racecondition`
+
+9. **retrieveexit.cpp**:
+    - **Description**: Demonstrates a parent process that retrieves a child's exit code.
+    - **Usage**: Run the executable directly.
+    - **Variables**: Same as ln.cpp
+    - Compile: `g++ retrieveexit.cpp -o retrieveexit`
+
+10. **catchsignal.cpp**, **default_signal.cpp**, and **ignore_signal.cpp**:
+    - **Description**: Catch, accept, or ignore signals.
+    - **Usage**: Run the executables directly.
+    - **Variables**: Same as ln.cpp
+    - Compile: `g++ catchsignal.cpp -o catchsignal`, `g++ default_signal.cpp -o default_signal`, and `g++ ignore_signal.cpp -o ignore_signal`
+
+11. **unixsystem.cpp**:
+    - **Description**: Implements the UNIX `system()` function using APIs.
+    - **Usage**: Run the executable directly.
+    - **Variables**: Same as ln.cpp
+    - Compile: `g++ unixsystem.cpp -o unixsystem`
+
+12. **pipeoperations.cpp** and **parenttochildpipe.cpp**:
+    - **Description**: Creates, writes to, and reads from a pipe, and sends data from parent to child through a pipe.
+    - **Usage**: Run the executables directly.
+    - **Variables**: Same as ln.cpp
+    - Compile: `g++ pipeoperations.cpp -o pipeoperations` and `g++ parenttochildpipe.cpp -o parenttochildpipe`
+
+
 
 #### Explore and Experiment:
    - Feel free to explore and experiment with the scripts by modifying the code and observing how it affects the program's behavior.
